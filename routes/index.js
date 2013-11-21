@@ -8,6 +8,7 @@ exports.refine = function(req, res){
 };
 
 function refineCSV(callback) {
+	//user_id (0), challenge_id (1), response (2), response_ddqual (3), media (4), likes (5), replies (6), replies_ddqual (7)
 	csv()
 		.from.path(__dirname+'/../input.csv')
 		.transform(function(row, index) {
@@ -23,6 +24,8 @@ function refineCSV(callback) {
 				response = row[2] + '\\n' + row[3];
 			}
 			parseThis(response, function(sent) {
+				//first col will be sentiment
+				//second will be popularity
 				newRow.push(sent.score);
 				newRow.push(row[4] + row[5]);
 			});
