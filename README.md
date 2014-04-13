@@ -1,5 +1,7 @@
 #Sentiment Analysis for CPI Data Vis
 
+Must have node installed
+
 First, clone the repository (or fork it):
 
     $ git clone https://github.com/engagementgamelab/cpi-sentiment.git
@@ -14,7 +16,7 @@ To use:
 Put input.csv file in root directory
     $ npm start
 
-Yo to localhost:3000/refine
+Go to localhost:3000/refine
 
 You should some ouput in terminal and then a new file output.csv created
 
